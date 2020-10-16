@@ -14,7 +14,7 @@ public class TrainController : MonoBehaviour
 
     void Update()
     {
-        rb.AddForce(new Vector3(0, -5, 0));
+        rb.AddForce(new Vector3(0, 0, -5));
     }
 
     private void OnCollisionEnter(Collision collision)
