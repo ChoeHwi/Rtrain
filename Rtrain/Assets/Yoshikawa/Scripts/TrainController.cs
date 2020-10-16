@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class TrainController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] GameObject train;
+
+    Rigidbody rb;
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        rb.AddForce(new Vector3(0, -5, 0));
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Goal")
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
