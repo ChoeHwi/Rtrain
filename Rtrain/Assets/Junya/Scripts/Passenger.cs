@@ -5,4 +5,9 @@ using UnityEngine;
 public class Passenger : PassengerBase
 {
     [SerializeField] int m_fare;
+
+    public override void PayMent()
+    {
+        
+    }
 }
