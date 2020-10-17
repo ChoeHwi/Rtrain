@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.WSA;
 
 public class Throw : MonoBehaviour
 {
@@ -11,7 +12,12 @@ public class Throw : MonoBehaviour
     [SerializeField] Color m_debugRayColorOnHit = Color.red;
     /// <summary>飛ばした Ray が当たった座標に m_marker を移動する際、Ray が当たった座標からどれくらいずらした場所に移動するかを設定する</summary>
     [SerializeField] Vector3 m_markerOffset = Vector3.up / 2;
-    // Start is called before the first frame update
+    /// <summary>今乗客を掴んででいるかどうか</summary>
+    public bool isHold;
+    /// <summary>掴んでいる乗客</summary>
+    public GameObject holdPass;
+
+
     void Start()
     {
         
@@ -20,29 +26,44 @@ public class Throw : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // クリックで Ray を飛ばす
+        // 乗客をクリックして掴む
         if (Input.GetButtonDown("Fire1"))
         {
-            // カメラの位置 → マウスでクリックした場所に Ray を飛ばすように設定する
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit; // out パラメータで Ray の衝突情報を受け取るための変数
-            // Ray を飛ばして、コライダーに当たったかどうかを戻り値で受け取る
-            bool isHit = Physics.Raycast(ray, out hit); // オーバーライドがたくさんあることに注意すること
-            // Ray が当たったかどうかで異なる処理をする
+            RaycastHit hit; 
+            bool isHit = Physics.Raycast(ray, out hit); 
             if (isHit)
             {
-                if(hit.collider.gameObject.tag == "")
+                if(hit.collider.gameObject.tag == "Passenger")
                 {
-
+                    holdPass = hit.collider.gameObject;
+                    isHold = true;
                 }
-                // Ray が当たった時は、当たった座標まで赤い線を引く
                 Debug.DrawLine(ray.origin, hit.point, m_debugRayColorOnHit);
             }
             else
             {
-                // Ray が当たらなかった場合は、Ray の方向に白い線を引く
                 Debug.DrawRay(ray.origin, ray.direction * m_debugRayLength);
             }
+        }
+
+        // 掴んでいる間カーソルと位置を同期
+        if (Input.GetButton("Fire1"))
+        {
+            if (holdPass)
+            {
+                var cursor = Input.mousePosition;
+                cursor.z = 13f;
+                var screenToWorldPointPosition = Camera.main.ScreenToWorldPoint(cursor);
+                holdPass.transform.position = screenToWorldPointPosition; ;
+            }
+        }
+        
+        //　カーソルを離した時乗客を離す
+        if (Input.GetButtonUp("Fire1"))
+        {
+            isHold = false;
+            holdPass = null;
         }
     }
 }
