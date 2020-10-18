@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.XR.WSA;
 
 public class Throw : MonoBehaviour
 {
@@ -20,7 +19,6 @@ public class Throw : MonoBehaviour
 
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -53,7 +51,7 @@ public class Throw : MonoBehaviour
             if (holdPass)
             {
                 var cursor = Input.mousePosition;
-                cursor.z = 13f;
+                cursor.z = 14.5f;
                 var screenToWorldPointPosition = Camera.main.ScreenToWorldPoint(cursor);
                 holdPass.transform.position = screenToWorldPointPosition; ;
             }
