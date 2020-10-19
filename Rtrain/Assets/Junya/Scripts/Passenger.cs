@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class Passenger : PassengerBase
 {
-    [SerializeField] int m_fare;
-    GameObject Score;
+    // 乗客がお金もってないとね♪
+    [SerializeField] public int m_fare;
+    //GameObject Score;
 
-    public override void PayMent()
-    {
-        Score = GameObject.Find("Score");
-        Score.GetComponent<UI_Score>().ScoreUpdate(m_fare);
-    }
+    //// お金を支払うメソッドだよ♪
+    //public override void PayMent()
+    //{
+    //    Score = GameObject.Find("Score");
+    //    Score.GetComponent<UI_Score>().ScoreUpdate(m_fare);
+    //}
 }

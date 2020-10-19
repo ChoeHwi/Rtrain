@@ -13,7 +13,7 @@ public abstract class PassengerBase : MonoBehaviour
         }   
     }
 
-    // お金を支払う関数だよ
-    // 今後クレーマー？みたいなやつの実装のために抽象関数で作るお
-    public abstract void PayMent();
+    //// お金を支払う関数だよ
+    //// 今後クレーマー？みたいなやつの実装のために抽象関数で作るお
+    //public abstract void PayMent();
 }
