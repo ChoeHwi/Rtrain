@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class Passenger : PassengerBase
 {
-    [SerializeField] int m_fare;
+    [SerializeField] public int m_fare;
 }

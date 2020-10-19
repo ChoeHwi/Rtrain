@@ -5,7 +5,8 @@ using UnityEngine;
 public class TrainController : MonoBehaviour
 {
     [SerializeField] GameObject train;
-
+    //リザルトのパネル
+    [SerializeField] GameObject resultpanel;
     Rigidbody rb;
     void Start()
     {
@@ -21,6 +22,7 @@ public class TrainController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Goal")
         {
+            resultpanel.SetActive(true);
             Destroy(this.gameObject);
         }
     }
