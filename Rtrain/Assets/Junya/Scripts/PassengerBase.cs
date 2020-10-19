@@ -8,7 +8,7 @@ public abstract class PassengerBase : MonoBehaviour
     {
         if (other.gameObject.tag == "Door")
         {
-            PayMent();
+            //PayMent();
             gameObject.SetActive(false);
         }   
     }
