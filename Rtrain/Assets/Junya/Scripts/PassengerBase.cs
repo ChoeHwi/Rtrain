@@ -8,7 +8,12 @@ public abstract class PassengerBase : MonoBehaviour
     {
         if (other.gameObject.tag == "Door")
         {
+            PayMent();
             gameObject.SetActive(false);
         }   
     }
+
+    //// お金を支払う関数だよ
+    //// 今後クレーマー？みたいなやつの実装のために抽象関数で作るお
+    //public abstract void PayMent();
 }
