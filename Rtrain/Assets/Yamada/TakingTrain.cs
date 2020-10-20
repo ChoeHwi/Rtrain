@@ -9,13 +9,15 @@ public class TakingTrain : MonoBehaviour
     {
         uI_Score = GameObject.FindObjectOfType<UI_Score>().GetComponent<UI_Score>();
     }
-    private void OnCollisionEnter(Collision collision)
+
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag == "Passenger")
+        Debug.Log(other.gameObject.name);
+        if (other.gameObject.tag == "Passenger")
         {
-            collision.gameObject.GetComponent<Passenger>();
-            uI_Score.ScoreUpdate(0);
-            Destroy(collision.gameObject);
+            int m_fare = other.gameObject.GetComponent<Passenger>().m_fare;
+            uI_Score.ScoreUpdate(m_fare);
+            Destroy(other.gameObject);
         }
     }
 }

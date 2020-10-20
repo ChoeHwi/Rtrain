@@ -47,7 +47,6 @@ public class Throw : MonoBehaviour
                     rb = holdPass.GetComponent<Rigidbody>();
                     rb.isKinematic = true;
                     holdPosition = holdPass.transform.position;
-                    Debug.Log(holdPosition);
                 }
                 Debug.DrawLine(ray.origin, hit.point, m_debugRayColorOnHit);
             }
@@ -77,7 +76,6 @@ public class Throw : MonoBehaviour
                 isHold = false;
                 rb.isKinematic = false;
                 throwPosition = holdPass.transform.position;
-                Debug.Log(throwPosition);
                 Vector3 force = new Vector3(throwPosition.x - holdPosition.x, 0, throwPosition.z - holdPosition.z).normalized * 3f;
                 rb.AddForce(force, ForceMode.Impulse);
                 holdPass = null;
