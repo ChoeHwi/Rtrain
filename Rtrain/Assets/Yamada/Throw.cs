@@ -59,7 +59,7 @@ public class Throw : MonoBehaviour
         // 掴んでいる間カーソルと位置を同期
         if (Input.GetButton("Fire1"))
         {
-            if (isHold)
+            if (isHold && holdPass)
             {
                 var cursor = Input.mousePosition;
                 cursor.z = 22f;
@@ -71,7 +71,7 @@ public class Throw : MonoBehaviour
         //　カーソルを離した時乗客を離す
         if (Input.GetButtonUp("Fire1"))
         {
-            if (isHold)
+            if (isHold && holdPass)
             {
                 isHold = false;
                 rb.isKinematic = false;
