@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using UnityEditor;
 using UnityEngine;
 
 public class Throw : MonoBehaviour
@@ -15,6 +17,12 @@ public class Throw : MonoBehaviour
     public bool isHold;
     /// <summary>掴んでいる乗客</summary>
     public GameObject holdPass;
+    /// <summary>掴んでいる乗客のRigidbody</summary>
+    private Rigidbody rb;
+    /// <summary>乗客を掴んだ位置</summary>
+    private Vector3 holdPosition;
+    /// <summary>乗客を離した位置</summary>
+    private Vector3 throwPosition; 
 
 
     void Start()
@@ -36,6 +44,10 @@ public class Throw : MonoBehaviour
                 {
                     holdPass = hit.collider.gameObject;
                     isHold = true;
+                    rb = holdPass.GetComponent<Rigidbody>();
+                    rb.isKinematic = true;
+                    holdPosition = holdPass.transform.position;
+                    Debug.Log(holdPosition);
                 }
                 Debug.DrawLine(ray.origin, hit.point, m_debugRayColorOnHit);
             }
@@ -48,20 +60,28 @@ public class Throw : MonoBehaviour
         // 掴んでいる間カーソルと位置を同期
         if (Input.GetButton("Fire1"))
         {
-            if (holdPass)
+            if (isHold)
             {
                 var cursor = Input.mousePosition;
-                cursor.z = 14.5f;
+                cursor.z = 22f;
                 var screenToWorldPointPosition = Camera.main.ScreenToWorldPoint(cursor);
-                holdPass.transform.position = screenToWorldPointPosition; ;
+                holdPass.transform.position = screenToWorldPointPosition;
             }
         }
         
         //　カーソルを離した時乗客を離す
         if (Input.GetButtonUp("Fire1"))
         {
-            isHold = false;
-            holdPass = null;
+            if (isHold)
+            {
+                isHold = false;
+                rb.isKinematic = false;
+                throwPosition = holdPass.transform.position;
+                Debug.Log(throwPosition);
+                Vector3 force = new Vector3(throwPosition.x - holdPosition.x, 0, throwPosition.z - holdPosition.z).normalized * 3f;
+                rb.AddForce(force, ForceMode.Impulse);
+                holdPass = null;
+            }
         }
     }
 }
