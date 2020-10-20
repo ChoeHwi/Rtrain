@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2764774938812793559}
   - component: {fileID: 2764774938812793544}
   - component: {fileID: 2764774938812793545}
+  - component: {fileID: 8347506689286321876}
   m_Layer: 0
   m_Name: Door3
   m_TagString: Door
@@ -88,11 +89,28 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2764774938812793547}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8347506689286321876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2764774938812793547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd7ab2961263b049970e9add250b263, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_debugRayLength: 100
+  m_debugRayColorOnHit: {r: 1, g: 0, b: 0, a: 1}
+  m_markerOffset: {x: 0, y: 0.5, z: 0}
+  isHold: 0
+  holdPass: {fileID: 0}
 --- !u!1 &2764774938968882042
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,6 +123,7 @@ GameObject:
   - component: {fileID: 2764774938968881990}
   - component: {fileID: 2764774938968881991}
   - component: {fileID: 2764774938968882040}
+  - component: {fileID: 5690708203367152524}
   m_Layer: 0
   m_Name: Door1
   m_TagString: Door
@@ -181,11 +200,28 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2764774938968882042}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5690708203367152524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2764774938968882042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd7ab2961263b049970e9add250b263, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_debugRayLength: 100
+  m_debugRayColorOnHit: {r: 1, g: 0, b: 0, a: 1}
+  m_markerOffset: {x: 0, y: 0.5, z: 0}
+  isHold: 0
+  holdPass: {fileID: 0}
 --- !u!1 &2764774939318593507
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,6 +234,7 @@ GameObject:
   - component: {fileID: 2764774939318593519}
   - component: {fileID: 2764774939318593504}
   - component: {fileID: 2764774939318593505}
+  - component: {fileID: 4471329379392717783}
   m_Layer: 0
   m_Name: Door2
   m_TagString: Door
@@ -274,11 +311,28 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2764774939318593507}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4471329379392717783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2764774939318593507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd7ab2961263b049970e9add250b263, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_debugRayLength: 100
+  m_debugRayColorOnHit: {r: 1, g: 0, b: 0, a: 1}
+  m_markerOffset: {x: 0, y: 0.5, z: 0}
+  isHold: 0
+  holdPass: {fileID: 0}
 --- !u!1 &2764774940073028774
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,7 +349,7 @@ GameObject:
   - component: {fileID: 4451039487178998869}
   - component: {fileID: 2764774938554164004}
   m_Layer: 0
-  m_Name: Train 1
+  m_Name: Train
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
