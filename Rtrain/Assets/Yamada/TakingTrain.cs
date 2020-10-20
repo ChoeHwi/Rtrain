@@ -12,7 +12,6 @@ public class TakingTrain : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject.name);
         if (other.gameObject.tag == "Passenger")
         {
             int m_fare = other.gameObject.GetComponent<Passenger>().m_fare;
