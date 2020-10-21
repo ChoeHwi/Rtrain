@@ -6,7 +6,10 @@ using UnityEngine.UI;
 public class UI_Score : MonoBehaviour
 {
     private Text scoreText;
-    public int score = 0;
+
+    private int score = 0;
+    public int GetScore() { return score; }
+
 
     void Start()
     {
