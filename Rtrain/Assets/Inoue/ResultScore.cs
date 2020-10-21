@@ -12,7 +12,7 @@ public class ResultScore : MonoBehaviour //ResultPanelのテキストのコン�
     {
         scoreText = GetComponent<Text>();
         uI_Score = GameObject.FindObjectOfType<UI_Score>().GetComponent<UI_Score>();
-        scoreText.text += uI_Score.score + "円";
+        scoreText.text += uI_Score.GetScore() + "円";
     }
 
     // Update is called once per frame
