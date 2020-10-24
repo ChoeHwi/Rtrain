@@ -22,12 +22,15 @@ public class UI_Score : MonoBehaviour
         
     }
 
+    /// <summary> fare（運賃）を渡してスコアに加えてから更新する関数 </summary>
+    /// <param name="fare"></param>
     public void ScoreUpdate(int fare)
     {
         score += fare;
         scoreText.text = "" + score;
     }
 
+    /// <summary> 始め、またはやり直す際にスコアを初期化する関数 </summary>
     public void ReStart()
     {
         score = 0;
