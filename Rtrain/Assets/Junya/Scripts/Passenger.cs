@@ -6,7 +6,6 @@ public class Passenger : PassengerBase
 {
     // 乗客がお金もってないとね♪
     public int m_fare;
-    GameObject Score;
 
     // お金を支払うメソッドだよ♪
     public override void PayMent()
