@@ -20,7 +20,6 @@ public class UI_Pause : MonoBehaviour
     /// <summary> PausePanelの「active化」と「非active化」を行う関数 </summary>
     public void SetActivePauseScreenPanel()
     {
-        //Debug.Log("pause");
         if (pauseScreenPanel.activeInHierarchy)
         {
             pauseScreenPanel.SetActive(false);
