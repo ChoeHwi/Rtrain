@@ -36,7 +36,5 @@ public class StageGenerator : MonoBehaviour
                     Instantiate(op.Result);
                 }
             };
-
-
     }
 }
