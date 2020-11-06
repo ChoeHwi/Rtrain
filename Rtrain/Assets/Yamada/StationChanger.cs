@@ -4,26 +4,25 @@ using System.Collections.Generic;
 using UnityEditor.UI;
 using UnityEngine;
 
-public class StageChanger : MonoBehaviour
+public class StationChanger : MonoBehaviour
 {
     /// <summary>配置してあるステージ一覧</summary>
-    public GameObject[] station;
+    public GameObject[] allStation;
     /// <summary>乗客一覧</summary>
     public GameObject[] passenger;
     private List<Vector3> savePos = new List<Vector3>();
     private void Start()
     {
-        StageChange(0);
     }
-    public void StageChange(int stationNumber)
+    public void StationChange(GameObject station)
     {
-        //引数のステージをオンに
-        var stationInfo = station[stationNumber].GetComponent<StationInfo>();
-        for (int i = 0; i < station.Length; i++)
+        //引数の駅をオンに
+        var stationInfo = station.GetComponent<StationInfo>();
+        for (int i = 0; i < allStation.Length; i++)
         {
-            station[i].SetActive(false);
+            allStation[i].SetActive(false);
         }
-        station[stationNumber].SetActive(true);
+        station.SetActive(true);
         //偉人、非乗客、乗客を生成;
         PeopleIns(stationInfo.passenger, stationInfo.passengerNOP);
         PeopleIns(stationInfo.noPassenger, stationInfo.noPossengerNOP);
@@ -33,7 +32,6 @@ public class StageChanger : MonoBehaviour
 
     public void PeopleIns(GameObject people, int nOP)
     {
-        Debug.Log(people);
         Vector3 temPos;
         bool duplicate = false;
         for (int i = 0; i < nOP; i++)
@@ -43,7 +41,6 @@ public class StageChanger : MonoBehaviour
                 temPos = new Vector3(Random.Range(-2, 6f), 1, Random.Range(-14f, 14f));
                 if (savePos.Count > 0)
                 {
-                    Debug.Log(savePos.Count);
                     for (int k = 0; k < savePos.Count; k++)
                     {
                         if (savePos[k] == temPos)
