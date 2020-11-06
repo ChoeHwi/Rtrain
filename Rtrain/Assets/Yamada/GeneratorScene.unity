@@ -1005,7 +1005,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0a470f56511d7044a206c5ceec55e13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allStation: []
+  allStation:
+  - {fileID: 708826695}
+  - {fileID: 1180314636518746228}
+  - {fileID: 1180314637958815899}
   passenger: []
 --- !u!4 &695425362
 Transform:
@@ -2163,6 +2166,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Train
       objectReference: {fileID: 0}
+    - target: {fileID: 3044289283569093790, guid: 5b6fc5ab646f0084782d495c7cf97783,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b6fc5ab646f0084782d495c7cf97783, type: 3}
 --- !u!1 &1180314636518746228 stripped
@@ -2367,6 +2375,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: station3
       objectReference: {fileID: 0}
+    - target: {fileID: 7238447551327428905, guid: ddae95caa9bbf5f4f8f769f4f347d5ee,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6cb592e7c6ee971458b31f2351c8b71f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddae95caa9bbf5f4f8f769f4f347d5ee, type: 3}
 --- !u!1001 &9026511393482677565
