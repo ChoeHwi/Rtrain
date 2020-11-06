@@ -5,10 +5,10 @@ using UnityEngine.AddressableAssets;
 
 public class StageGenerator : MonoBehaviour
 {
-    [SerializeField] StationData[] stationDatas;
+    [SerializeField] StageData[] stationDatas;
     void Start()
     {
-        ChangeStage(0, 0);
+
     }
 
     // Update is called once per frame
@@ -17,7 +17,7 @@ public class StageGenerator : MonoBehaviour
 
     }
 
-    public void ChangeStage(int station, int stationNumber)
+    /*public void ChangeStage(int station, int stationNumber)
     {
         var stationPosition = new Vector3(1.76f, 0f, (0f - 2100 * stationNumber));
         Addressables
@@ -36,5 +36,5 @@ public class StageGenerator : MonoBehaviour
                     Instantiate(op.Result);
                 }
             };
-    }
+    }*/
 }
