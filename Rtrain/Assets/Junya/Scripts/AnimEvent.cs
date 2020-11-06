@@ -15,7 +15,8 @@ public class AnimEvent : MonoBehaviour
 
     public void NextStation()
     {
+        Debug.Log("animationEvent発生だぽん");
         m_gameManager.nextStation = true;
-        m_trainDir.GetComponent<TimelinePlayer>().PauseTimeline();
+        //m_trainDir.GetComponent<TimelinePlayer>().PauseTimeline();
     }
 }
