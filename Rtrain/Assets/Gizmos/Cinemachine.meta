@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: 034af866454fa6349b5bbd1296554cd6
-=======
-guid: 75b2f3b69ddc707489b3c1649ef14655
->>>>>>> 7fdcdc828fd04ccc6ca6b3783d9442f95af881de
+<<<<<<< HEAD:Rtrain/Assets/Gizmos/Cinemachine.meta
+guid: 7cc48e5a45e308f4cb368b4e22a54732
 folderAsset: yes
+=======
+guid: 1e24085edff8e4e499582d8dcf099510
+>>>>>>> f4c90c84c3d025e9ed381788593009432d1eae5a:Rtrain/Assets/UnityAssets/Cinemachine/Timeline/LegacyTimelineAPI.unitypackage.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
