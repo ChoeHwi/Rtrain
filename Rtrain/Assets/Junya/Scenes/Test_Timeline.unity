@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 404824691}
   - component: {fileID: 404824690}
   - component: {fileID: 404824689}
+  - component: {fileID: 404824692}
   m_Layer: 0
   m_Name: TrainDirector
   m_TagString: Untagged
@@ -168,8 +169,8 @@ PlayableDirector:
   m_Enabled: 1
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: 52ccc445d5d594e4d936833581546312, type: 2}
-  m_InitialState: 1
-  m_WrapMode: 2
+  m_InitialState: 0
+  m_WrapMode: 1
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
@@ -191,6 +192,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &404824692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404824688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fb0b87a25411e04c9f71484991224c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_trainDirector: {fileID: 404824690}
 --- !u!1 &613332747
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,6 +669,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1707558248}
   - component: {fileID: 1707558249}
+  - component: {fileID: 1707558250}
   m_Layer: 0
   m_Name: TestTrain
   m_TagString: Untagged
@@ -698,6 +713,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1707558250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707558247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c416feb827672a4da456bd013b928b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_trainDir: {fileID: 404824688}
 --- !u!1 &1955217013
 GameObject:
   m_ObjectHideFlags: 0
