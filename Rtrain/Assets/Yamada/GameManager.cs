@@ -8,8 +8,6 @@ public class GameManager : MonoBehaviour
 {
     /// <summary>シーンの状態</summary>
     public SceneType sceneStatus = SceneType.Title;
-    /// <summary>ゲームの状態</summary>
-    public GameType gameStatus = GameType.None;
     /// <summary>現在のステージ</summary>
     public StageData m_stationData;
     /// <summary>電車が駅を通り過ぎたよって合図</summary>
@@ -17,6 +15,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] StationChanger stationChanger;
     [SerializeField] Throw throwS;
     [SerializeField] TitlePanel titlePane;
+    [SerializeField] UI_Result uI_Result;
     
     public void GameStart(StageData stageData)
     {
@@ -28,12 +27,13 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < stageData.station.Count(); i++ )
         {
             stationChanger.StationChange(stageData.station[i]);
-            if (!nextStation)
+            while(!nextStation)
             {
                 yield return null;
             }
             nextStation = false;
         }
+        uI_Result.SetActiveResultPanel();
     }
 
     /// <summary>画面の状態の種類</summary>
@@ -44,14 +44,4 @@ public class GameManager : MonoBehaviour
         Settings,
 
     }
-
-    /// <summary>ゲームの状態の種類</summary>
-    public enum GameType
-    { 
-        None,
-        Station,
-        BetweenStations
-    }
-
-
 }

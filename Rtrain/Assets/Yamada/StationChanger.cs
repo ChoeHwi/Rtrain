@@ -11,9 +11,11 @@ public class StationChanger : MonoBehaviour
     /// <summary>乗客一覧</summary>
     public GameObject[] passenger;
     private List<Vector3> savePos = new List<Vector3>();
+
     private void Start()
     {
     }
+
     public void StationChange(GameObject station)
     {
         //引数の駅をオンに
