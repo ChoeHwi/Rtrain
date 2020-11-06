@@ -6,15 +6,25 @@ using UnityEngine.UI;
 public class UI_Result : MonoBehaviour
 {
     [SerializeField] GameObject resultPanel;
-    [SerializeField] GameObject resultScoreTextObj;
-    private Text resultScoreText;
+
     [SerializeField] GameObject scoreObj;
     private UI_Score score;
+    [SerializeField] GameObject resultScoreTextObj;
+    private Text resultScoreText;
+    [SerializeField] GameObject resultPassengerTextObj;
+    private Text resultPassengerCountText;
+    [SerializeField] GameObject resultNoPassengerTextObj;
+    private Text resultNoPassengerCountText;
+    [SerializeField] GameObject resultGreatPassengerTextObj;
+    private Text resultGreatPassengerCountText;
 
     void Start()
     {
-        resultScoreText = resultScoreTextObj.GetComponent<Text>();
         score = scoreObj.GetComponent<UI_Score>();
+        resultScoreText = resultScoreTextObj.GetComponent<Text>();
+        resultPassengerCountText = resultPassengerTextObj.GetComponent<Text>();
+        resultNoPassengerCountText = resultNoPassengerTextObj.GetComponent<Text>();
+        resultGreatPassengerCountText = resultGreatPassengerTextObj.GetComponent<Text>();
     }
 
     void Update()
@@ -38,7 +48,10 @@ public class UI_Result : MonoBehaviour
 
     private void SetResultScore()
     {
-        resultScoreText.text = "" + score.GetScore();
+        resultScoreText.text = "今回のスコア　" + score.GetScore();
+        resultPassengerCountText.text = "乗せた乗客　" + score.GetPassengerCount() + "　人";
+        resultNoPassengerCountText.text = "乗せた非乗客" + score.GetNoPassengerCount() + "　人";
+        resultGreatPassengerCountText.text = "乗せた偉人" + score.GetGreatPassengerCount() + "　人";
     }
 
 }
