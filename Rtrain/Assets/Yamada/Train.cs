@@ -16,7 +16,10 @@ public class Train : MonoBehaviour
 
     void Update()
     {
-        m_rb.AddForce(new Vector3(0, 0, -5));
+        if (gameManager.sceneStatus == GameManager.SceneType.Game)
+        {
+            m_rb.AddForce(new Vector3(0, 0, -5));
+        }
     }
 
     private void OnTriggerEnter(Collider other)
