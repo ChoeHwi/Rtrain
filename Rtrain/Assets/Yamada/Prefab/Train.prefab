@@ -292,8 +292,8 @@ GameObject:
   - component: {fileID: 3044289283569093791}
   - component: {fileID: 3044289283569093790}
   - component: {fileID: 8027550104019858245}
-  - component: {fileID: 3577067589418148974}
   - component: {fileID: 2764774939990460917}
+  - component: {fileID: 2940983274984867256}
   m_Layer: 0
   m_Name: Train
   m_TagString: Untagged
@@ -394,20 +394,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 6
   m_CollisionDetection: 0
---- !u!114 &3577067589418148974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3044289283569093789}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cac8628f90a4ced438da85c1f31ab904, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_train: {fileID: 0}
-  m_resultpanel: {fileID: 0}
 --- !u!114 &2764774939990460917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -425,3 +411,18 @@ MonoBehaviour:
   m_markerOffset: {x: 0, y: 0.5, z: 0}
   isHold: 0
   holdPass: {fileID: 0}
+--- !u!114 &2940983274984867256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3044289283569093789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef1b67ec9c974d4fa5f827319aeb380, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_train: {fileID: 0}
+  gameManager: {fileID: 0}
+  m_resultpanel: {fileID: 0}
