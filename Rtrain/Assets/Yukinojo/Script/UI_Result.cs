@@ -50,8 +50,8 @@ public class UI_Result : MonoBehaviour
     {
         resultScoreText.text = "今回のスコア　" + score.GetScore();
         resultPassengerCountText.text = "乗せた乗客　" + score.GetPassengerCount() + "　人";
-        resultNoPassengerCountText.text = "乗せた非乗客" + score.GetNoPassengerCount() + "　人";
-        resultGreatPassengerCountText.text = "乗せた偉人" + score.GetGreatPassengerCount() + "　人";
+        resultNoPassengerCountText.text = "乗せた非乗客　" + score.GetNoPassengerCount() + "　人";
+        resultGreatPassengerCountText.text = "乗せた偉人　" + score.GetGreatPassengerCount() + "　人";
     }
 
 }
