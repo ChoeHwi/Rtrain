@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] StationChanger stationChanger;
     [SerializeField] Throw throwS;
     [SerializeField] TitlePanel titlePane;
+    [SerializeField] UI_Result uI_Result;
     
     public void GameStart(StageData stageData)
     {
@@ -32,6 +33,7 @@ public class GameManager : MonoBehaviour
             }
             nextStation = false;
         }
+        uI_Result.SetActiveResultPanel();
     }
 
     /// <summary>画面の状態の種類</summary>
