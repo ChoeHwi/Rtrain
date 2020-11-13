@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Rtrain/Assets/Yamada/StationData.asset.meta
+guid: 1f66191fc2d632742a7958db477e6f29
+=======
 guid: f63a5d60c873fc248b900d7d26790b05
+>>>>>>> f4c90c84c3d025e9ed381788593009432d1eae5a:Rtrain/Assets/AddressableAssetsData/AddressableAssetSettings.asset.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 0
