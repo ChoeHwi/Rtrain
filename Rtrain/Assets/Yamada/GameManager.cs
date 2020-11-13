@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Policy;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -19,6 +18,7 @@ public class GameManager : MonoBehaviour
     
     public void GameStart(StageData stageData)
     {
+        sceneStatus = SceneType.Game;
         StartCoroutine("Game", stageData);
     }
 
@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 0; i < stageData.station.Count(); i++ )
         {
+            Debug.Log(stageData.station[i]);
             stationChanger.StationChange(stageData.station[i]);
             while(!nextStation)
             {

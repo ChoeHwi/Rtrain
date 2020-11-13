@@ -40,7 +40,7 @@ public class Throw : MonoBehaviour
             bool isHit = Physics.Raycast(ray, out hit); 
             if (isHit)
             {
-                if(hit.collider.gameObject.tag == "Passenger")
+                if(hit.collider.gameObject.tag == "Passenger" || hit.collider.gameObject.tag == "NoPassenger" || hit.collider.gameObject.tag == "GreatPassenger")
                 {
                     holdPass = hit.collider.gameObject;
                     isHold = true;
