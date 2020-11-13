@@ -10,5 +10,6 @@ public class Test_nonPassenger : PassengerBase
     {
         Score = GameObject.Find("Score");
         Score.GetComponent<UI_Score>().ScoreUpdate(m_fine);
+        Score.GetComponent<UI_Score>().AnyPassengerCountUpdate(this.gameObject.tag);
     }
 }

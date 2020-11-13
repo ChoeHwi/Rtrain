@@ -12,5 +12,6 @@ public class Passenger : PassengerBase
     {
         Score = GameObject.Find("Score");
         Score.GetComponent<UI_Score>().ScoreUpdate(m_fare);
+        Score.GetComponent<UI_Score>().AnyPassengerCountUpdate(this.gameObject.tag);
     }
 }
