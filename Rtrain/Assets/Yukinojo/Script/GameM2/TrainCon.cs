@@ -5,21 +5,16 @@ using UnityEngine;
 public class TrainCon : MonoBehaviour
 {
     [SerializeField] GameObject m_train;
-    [SerializeField] GameManager gameManager;
-    Rigidbody m_rb;
-    Vector3 savePos;
+    [SerializeField] StationChanger2 stationChanger;
+    private Rigidbody m_rb;
+    private Vector3 savePos;
+    [SerializeField] float speed;
+    [SerializeField] float speedUP;
+
     void Start()
     {
         m_rb = GetComponent<Rigidbody>();
         savePos = this.gameObject.transform.position;
-    }
-
-    void Update()
-    {
-        if (gameManager.sceneStatus == GameManager.SceneType.Game)
-        {
-            m_rb.AddForce(new Vector3(0, 0, -5));
-        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -27,7 +22,15 @@ public class TrainCon : MonoBehaviour
         if (other.gameObject.tag == "Goal")
         {
             this.transform.position = savePos;
-            gameManager.nextStation = true;
+            stationChanger.NextStation();
+            speed += -speedUP;
+            TrainStart();
         }
     }
+
+    public void TrainStart()
+    {
+        m_rb.velocity = new Vector3(0, 0, -speed);
+    }
+
 }

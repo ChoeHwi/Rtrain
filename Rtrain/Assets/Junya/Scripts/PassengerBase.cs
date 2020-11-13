@@ -4,11 +4,11 @@ using UnityEngine;
 
 public abstract class PassengerBase : MonoBehaviour
 {
-    GameManager gameManager;
+    GameManager2 gameManager;
     public GameObject Score;
     private void Start()
     {
-        gameManager =  GameObject.Find("GameManager").GetComponent<GameManager>();
+        gameManager =  GameObject.Find("GameManager").GetComponent<GameManager2>();
     }
     private void Update()
     {
