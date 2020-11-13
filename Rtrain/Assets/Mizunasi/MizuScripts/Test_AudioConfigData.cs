@@ -1,4 +1,7 @@
 ﻿using UnityEngine;
+/// <summary>
+/// 保存するDATAの種類をいれる
+/// </summary>
 [SerializeField]
 public class Test_AudioConfigData
 {

@@ -1,20 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-
+/// <summary>
+/// 音量を変更するためのスクリプト
+/// </summary>
 public class Test_SetVolume : MonoBehaviour
 {
 
-    [SerializeField]
-    UnityEngine.Audio.AudioMixer m_mixer;
-    [SerializeField]
-    Slider m_masterSlider;
-    [SerializeField]
-    Slider m_BGMSlider;
-    [SerializeField]
-    Slider m_SESlider;
+    [SerializeField]  UnityEngine.Audio.AudioMixer m_mixer;
+    ///<summary>MasterVolumeを変えるためのSlider</summary>
+    [SerializeField]　Slider m_masterSlider;
+    ///<summary>BGMVolumeを変えるためのSlider</summary>
+    [SerializeField]  Slider m_BGMSlider;
+    ///<summary>SEVolumeを変えるためのSlider</summary>
+    [SerializeField]  Slider m_SESlider;
     Test_AudioConfigSaveLoad m_configData;
-    
     
     public float masterVolume
     {
