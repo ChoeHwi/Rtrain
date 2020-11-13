@@ -40,7 +40,7 @@ public class StationChanger : MonoBehaviour
         {
             do
             {
-                temPos = new Vector3(Random.Range(-2, 6f), 1, Random.Range(-14f, 14f));
+                temPos = new Vector3(Random.Range(2, 12f), 1, Random.Range(-14f, 14f));
                 if (savePos.Count > 0)
                 {
                     for (int k = 0; k < savePos.Count; k++)
