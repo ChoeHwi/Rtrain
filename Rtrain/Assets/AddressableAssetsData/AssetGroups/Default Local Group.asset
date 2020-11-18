@@ -18,7 +18,7 @@ MonoBehaviour:
   m_GUID: 133d2b8c6ddbb294481fd539e14a26e2
   m_SerializeEntries: []
   m_ReadOnly: 0
-  m_Settings: {fileID: 11400000, guid: f63a5d60c873fc248b900d7d26790b05, type: 2}
+  m_Settings: {fileID: 11400000, guid: 1f66191fc2d632742a7958db477e6f29, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 58d8e2410674ef64ba6f0aacd8ae39dd, type: 2}

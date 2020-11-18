@@ -9,7 +9,6 @@ public class TimelinePlayer : MonoBehaviour
     {
         //同じゲームオブジェクトにあるPlayableDirectorを取得する
         m_trainDirector = GetComponent<PlayableDirector>();
-        PlayTimeline();
     }
 
     //再生する
