@@ -16,7 +16,13 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 133d2b8c6ddbb294481fd539e14a26e2
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 75c297459e463df4eb8262b608270988
+    m_Address: "Assets/Fujii/\u8FD1\u672A\u6765\u4EEE\u7D50\u5408 (1).psb"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 1f66191fc2d632742a7958db477e6f29, type: 2}
   m_SchemaSet:
