@@ -111,8 +111,8 @@ MonoBehaviour:
   - {fileID: 3826234789259226497}
   - {fileID: 3826234789588526283}
   m_Bounds:
-    m_Center: {x: 0.039170265, y: -0.09000015, z: -16.15}
-    m_Extent: {x: 4.947769, y: 6.8700037, z: 0}
+    m_Center: {x: 0.03916931, y: -0.090001106, z: -16.149998}
+    m_Extent: {x: 4.94777, y: 6.8700027, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &3826234788497589683
@@ -552,8 +552,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 15, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 4.016747, y: 12.488321, z: 0.13112804}
+  m_Center: {x: -0.08521089, y: -0.5738908, z: -0.03443601}
 --- !u!54 &3643435866716616582
 Rigidbody:
   m_ObjectHideFlags: 0
