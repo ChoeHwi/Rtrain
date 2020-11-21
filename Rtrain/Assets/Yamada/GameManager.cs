@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] Throw throwS;
     [SerializeField] TitlePanel titlePane;
     [SerializeField] UI_Result uI_Result;
-    
+
     public void GameStart(StageData stageData)
     {
         sceneStatus = SceneType.Game;
@@ -24,17 +24,17 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator Game(StageData stageData)
     {
-        for (int i = 0; i < stageData.station.Count(); i++ )
+        for (int i = 0; i < stageData.station.Count(); i++)
         {
-            Debug.Log(stageData.station[i]);
-            stationChanger.StationChange(stageData.station[i]);
-            while(!nextStation)
+            while (!nextStation)
             {
                 yield return null;
             }
+            Debug.Log(stageData.station[i]);
+            stationChanger.StationChange(stageData.station[i]);
             nextStation = false;
         }
-        uI_Result.SetActiveResultPanel();
+        //uI_Result.SetActiveResultPanel();
     }
 
     /// <summary>画面の状態の種類</summary>

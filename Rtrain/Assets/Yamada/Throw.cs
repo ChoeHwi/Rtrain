@@ -62,7 +62,7 @@ public class Throw : MonoBehaviour
             if (isHold && holdPass)
             {
                 var cursor = Input.mousePosition;
-                cursor.z = 26f;
+                cursor.z = 36f;
                 var screenToWorldPointPosition = Camera.main.ScreenToWorldPoint(cursor);
                 holdPass.transform.position = screenToWorldPointPosition;
             }
