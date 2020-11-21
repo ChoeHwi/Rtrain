@@ -1569,7 +1569,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 967547139}
-        m_MethodName: set_masterVolume
+        m_MethodName: set_MasterVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2092,7 +2092,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 967547139}
-        m_MethodName: set_bgmVolume
+        m_MethodName: set_BgmVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2510,7 +2510,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 967547139}
-        m_MethodName: set_seVolume
+        m_MethodName: set_SEVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

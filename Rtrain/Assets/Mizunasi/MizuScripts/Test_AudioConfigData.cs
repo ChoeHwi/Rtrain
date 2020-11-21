@@ -1,4 +1,7 @@
 ﻿using UnityEngine;
+/// <summary>
+/// 保存する音量設定DATAいれ
+/// </summary>
 [SerializeField]
 public class Test_AudioConfigData
 {
