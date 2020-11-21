@@ -27,14 +27,16 @@ public class GameManager : MonoBehaviour
         m_trainDir = GameObject.Find("TrainDirector");
         sceneStatus = SceneType.Game;
         m_StageData = stageData;
+        NextStation();
     }
 
     public void NextStation()
     {
+        Debug.Log(ind);
         if (ind < m_StageData.station.Count())
         {
-            ind++;
             stationChanger.StationChange(m_StageData.station[ind]);
+            ind++;
         }
         else
         {
