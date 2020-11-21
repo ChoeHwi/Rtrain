@@ -19,7 +19,7 @@ public class AnimEvent : MonoBehaviour
 
     public void NextStation()
     {
-        i++;
+        /*i++;
         Debug.Log(i);
         m_gameManager.nextStation = true;
         if (i == 3)
@@ -27,7 +27,7 @@ public class AnimEvent : MonoBehaviour
             uI_Result.SetActiveResultPanel();
             m_trainDir.GetComponent<TimelinePlayer>().PauseTimeline();
             m_fadeImage.gameObject.SetActive(false);
-        }
+        }*/
         
     }
 }
