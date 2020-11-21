@@ -1,6 +1,19 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Rtrain/Assets/Junya/Graphics/Materials/mat_train.mat.meta
 guid: f2ba1b3569219fc46955ff661ee32467
+=======
+<<<<<<< HEAD:Rtrain/Assets/Gizmos/Cinemachine.meta~f4c90c84c3d025e9ed381788593009432d1eae5a.meta
+<<<<<<< HEAD
+guid: a7d47d325ec47bb4a9d209dd0d548824
+=======
+guid: 4af88559431f035438f2b4df41f4695e
+>>>>>>> 7111af2b0f056521aad9957c5a09ef0460dcacb2
+DefaultImporter:
+=======
+guid: b7ddd57bfe2014745b00040e5895841c
+>>>>>>> c9cdcf5010dd9a6e7a8946ffd62b6eb3291ba5c9:Rtrain/Assets/Junya/Cube.controller.meta
 NativeFormatImporter:
+>>>>>>> b0d420004b1bc9dfdb1179f0f1935d19dcc86c11:Rtrain/Assets/Junya/Cube.controller.meta
   externalObjects: {}
   mainObjectFileID: 0
   userData: 
