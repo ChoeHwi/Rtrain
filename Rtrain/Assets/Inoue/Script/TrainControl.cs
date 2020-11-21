@@ -36,7 +36,7 @@ public class TrainControl : MonoBehaviour
         if (other.gameObject.tag == "Goal")
         {
             this.transform.position = savePos;
-            gameManager.nextStation = true;
+            //gameManager.nextStation = true;
             speed += speedUp;
             StartCoroutine("FadeScene");
         }
@@ -47,7 +47,7 @@ public class TrainControl : MonoBehaviour
         moveTrain = false;
         m_rb.velocity = new Vector3(0, 0, 0);
         yield return new WaitForSeconds(3.0f);
-        gameManager.nextStation = true;
+        //gameManager.nextStation = true;
         moveTrain = true;
         fadePanel.SetActive(false);
 

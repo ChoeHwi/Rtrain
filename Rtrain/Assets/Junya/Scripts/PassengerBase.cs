@@ -12,10 +12,10 @@ public abstract class PassengerBase : MonoBehaviour
     }
     private void Update()
     {
-        if (gameManager.nextStation)
+        /*if (gameManager.nextStation)
         {
             Destroy(this.gameObject);
-        }
+        }*/
     }
     private void OnTriggerEnter(Collider other)
     {
