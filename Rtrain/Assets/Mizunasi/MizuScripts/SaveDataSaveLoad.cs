@@ -20,8 +20,8 @@ public class SaveDataSaveLoad : MonoBehaviour
     private void Start()
     {　 //ANDROID用
 #if UNITY_ANDROID
-        json_audiopath = Application.streamingAssetsPath + "/audiosavedata.json";
-        json_hiscorepath = Application.streamingAssetsPath + "/hiscoresavedata.json";
+        json_audioPath = Application.streamingAssetsPath + "/audiosavedata.json";
+        json_hiScorePath = Application.streamingAssetsPath + "/hiscoresavedata.json";
 #else
         //非Android
         json_audioPath = Application.dataPath + "/audiosavedata.json";
