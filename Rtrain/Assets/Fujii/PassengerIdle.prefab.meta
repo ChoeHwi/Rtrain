@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Rtrain/Assets/Gizmos/Cinemachine.meta~f4c90c84c3d025e9ed381788593009432d1eae5a.meta
+guid: 9eefb24c14f0fd24fb9bb17031212d34
+DefaultImporter:
+=======
 guid: a3980a3efd369ff48a60410d28b0c7c3
 PrefabImporter:
+>>>>>>> c9cdcf5010dd9a6e7a8946ffd62b6eb3291ba5c9:Rtrain/Assets/Fujii/PassengerIdle.prefab.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

@@ -9,7 +9,7 @@ public class StationChanger : MonoBehaviour
     /// <summary>配置してあるステージ一覧</summary>
     public GameObject[] allStation;
     /// <summary>乗客一覧</summary>
-    public GameObject[] passenger;
+    public List<GameObject> passenger = new List<GameObject>();
     private List<Vector3> savePos = new List<Vector3>();
 
     private void Start()
@@ -18,6 +18,13 @@ public class StationChanger : MonoBehaviour
 
     public void StationChange(GameObject station)
     {
+        for (int i = 0; i < passenger.Count; i++)
+        {
+            if (passenger[i] != null)
+            {
+                Destroy(passenger[i]);
+            }
+        }
         //引数の駅をオンに
         var stationInfo = station.GetComponent<StationInfo>();
         for (int i = 0; i < allStation.Length; i++)
@@ -40,7 +47,7 @@ public class StationChanger : MonoBehaviour
         {
             do
             {
-                temPos = new Vector3(Random.Range(2, 12f), 1, Random.Range(-14f, 14f));
+                temPos = new Vector3(Random.Range(4, 7f), 1, Random.Range(-14f, 14f));
                 if (savePos.Count > 0)
                 {
                     for (int k = 0; k < savePos.Count; k++)
@@ -54,7 +61,7 @@ public class StationChanger : MonoBehaviour
                 }
             } while (duplicate);
             savePos.Add(temPos);
-            Instantiate(people, temPos, new Quaternion(0, 0, 0, 0));
+            passenger.Add(Instantiate(people, temPos, new Quaternion(0, 0, 0, 0)));
         }
     }
 

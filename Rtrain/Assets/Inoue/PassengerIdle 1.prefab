@@ -111,8 +111,8 @@ MonoBehaviour:
   - {fileID: 3826234789259226497}
   - {fileID: 3826234789588526283}
   m_Bounds:
-    m_Center: {x: 0.039170265, y: -0.09000015, z: -16.15}
-    m_Extent: {x: 4.947769, y: 6.8700037, z: 0}
+    m_Center: {x: 0.03916931, y: -0.090001106, z: -16.149998}
+    m_Extent: {x: 4.94777, y: 6.8700027, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &3826234788497589683
@@ -499,6 +499,7 @@ GameObject:
   - component: {fileID: 3643435866716616582}
   - component: {fileID: 133802488561574501}
   - component: {fileID: 5838589928487912727}
+  - component: {fileID: 6465969898545969031}
   m_Layer: 0
   m_Name: PassengerIdle 1
   m_TagString: Passenger
@@ -552,8 +553,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 15, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 4.016747, y: 12.488321, z: 0.13112804}
+  m_Center: {x: -0.08521089, y: -0.5738908, z: -0.03443601}
 --- !u!54 &3643435866716616582
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -596,6 +597,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f4bc305fb3e4dc41ac3e1aa14d584b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!227 &6465969898545969031
+BillboardRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3826234789696222711}
+  m_Enabled: 0
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Billboard: {fileID: 0}
 --- !u!1 &3826234789953319931
 GameObject:
   m_ObjectHideFlags: 0

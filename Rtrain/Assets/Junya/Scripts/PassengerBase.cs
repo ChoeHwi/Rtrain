@@ -4,18 +4,18 @@ using UnityEngine;
 
 public abstract class PassengerBase : MonoBehaviour
 {
-    GameManager2 gameManager;
+    GameManager gameManager;
     public GameObject Score;
     private void Start()
     {
-        gameManager =  GameObject.Find("GameManager").GetComponent<GameManager2>();
+        gameManager =  GameObject.Find("GameManager").GetComponent<GameManager>();
     }
     private void Update()
     {
-        if (gameManager.nextStation)
+        /*if (gameManager.nextStation)
         {
             Destroy(this.gameObject);
-        }
+        }*/
     }
     private void OnTriggerEnter(Collider other)
     {
